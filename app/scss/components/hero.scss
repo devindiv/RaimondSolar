@@ -1,9 +1,10 @@
 @use '../util/breakpoints.scss' as breakpoint;
 
 .hero-section{
-    background-image: url("https://devindiv.github.io/coverphoto.jpg");
+    background-image: url("https://pixabay.com/photos/alternative-cell-clean-ecological-21761/");
     background-size: cover;
     background-position: center;
+    background-color:blue;
     height: 100vh;
 
     .row{
