@@ -1,0 +1,50 @@
+@use '../util/breakpoints.scss' as breakpoint;
+
+.about{
+    display: flex;
+    margin: 7.2rem 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+
+    @include breakpoint.breakpoint-down('small'){
+        flex-direction: column;
+    }
+
+    .img-box{
+        margin: 0 auto;
+        img{
+            display: block;
+
+            @include breakpoint.breakpoint-down('large'){
+                width: 480px;
+                height: 360px;
+            }
+
+            @include breakpoint.breakpoint-down('small'){
+                width: 360px;
+                height: 240px;
+            }
+        }
+    }
+
+    .safety-text{
+        position: absolute;
+        background-color: #fff;
+        z-index: 1;
+        top: 60%;
+        left: 30%;
+        padding: 66px;
+        color: var(--text);
+
+        @include breakpoint.breakpoint-down('large'){
+            left: 20%;
+            top: 55%;
+        }
+        @include breakpoint.breakpoint-down('small'){
+            position: static;
+        }
+    }
+}

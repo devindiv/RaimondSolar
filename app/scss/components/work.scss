@@ -1,0 +1,49 @@
+@use '../util/breakpoints.scss' as breakpoint;
+
+.work-showcase{
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--headings);
+    padding: 3rem;
+
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .gallery-grid{
+        --gap: 16px;
+        --num-cols: 2;
+        --row-height: 330px;
+    
+        box-sizing: border-box;
+        padding: 0 32rem;
+    
+        display: grid;
+    
+        grid-template-columns: repeat(var(--num-cols), 1fr);
+        grid-auto-rows: var(--row-height);
+        gap: var(--gap);
+
+        :hover{
+            transform: scale(1.1);
+            transition:0.3s ease-in-out;
+            transform: translateY(-5px);
+        }
+
+        @include breakpoint.breakpoint-down('large'){
+            padding: 0 5rem;
+        }
+        @include breakpoint.breakpoint-down('small'){
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+        }
+    }
+    
+    .gallery-grid > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

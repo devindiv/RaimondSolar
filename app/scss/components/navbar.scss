@@ -1,0 +1,32 @@
+@use '../util/breakpoints.scss' as breakpoint;
+
+.navbar{
+    background-color: var(--primary);
+    font-family: var(--montserrat);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 57px;
+
+    .brand-logo{
+        max-width: 21.25rem;
+    }
+    p{
+        color: var(--headings);
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-style: normal;
+
+        span{
+            color: var(--accent);
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        @include breakpoint.breakpoint-down('small'){
+            display: none;
+        }
+    }
+}

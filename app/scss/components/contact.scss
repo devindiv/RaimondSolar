@@ -1,0 +1,78 @@
+@use '../util/breakpoints.scss' as breakpoint;
+
+.col-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    .contact-container{
+        text-align: center;
+        background-color: var(--primary-two);
+        height: 640px;
+        width: 480px;
+        padding: 24px 0;
+        color: var(--headings);
+        h1{
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1px;
+        }
+        p{  
+            margin: 2px 0 37px 0;
+            font-weight: 200;
+            font-size: 0.9375rem;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            input{
+                width: 286px;
+                height: 2.5rem;
+                font-family: var(--montserrat);
+                border: none;
+                padding: 0.5rem;
+                font-family: var(--montserrat);
+                font-size: 1rem;
+                border: none;
+                outline: none;
+            }
+            textarea{
+                resize: none;
+                width: 286px;
+                height: 117px;
+                font-family: var(--montserrat);
+                font-size: 1rem;
+                outline: none;
+            }
+            .send-btn{
+                width: 286px;
+                height: 2.5rem;
+                text-align: center;
+                color: var(--headings);
+                font-family: var(--montserrat);
+                background-color: var(--accent);
+                font-size: 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+            }
+            .send-btn:hover{
+                background-color: var(--button);
+                transition: background-color 0.3s ease-in-out;
+            }
+        }
+
+        @include breakpoint.breakpoint-down('small'){
+            position: absolute;
+            top: 40%;
+            transform: translateX(-57%);
+            width: 360px;
+            height: 560px;
+        }
+    }
+    
+}

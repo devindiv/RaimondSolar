@@ -1,0 +1,16 @@
+@use '../util/breakpoints.scss' as breakpoint;
+
+footer{
+    background-color: var(--primary);
+    color: var(--headings);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        max-width: 15.25rem;
+    }
+
+    @include breakpoint.breakpoint-down('small'){
+        flex-direction: column;
+    }
+}
